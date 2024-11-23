@@ -17,6 +17,7 @@ export class AppComponent implements OnInit{
 
   showMessageUs$!: Observable<any>
   showMessageFr$!: Observable<any>
+  presentationTimes$!: Observable<any>
 
   constructor(private httpClient:HttpClient){}
 
@@ -35,7 +36,7 @@ export class AppComponent implements OnInit{
 
       this.showMessageUs$ = this.httpClient.get(this.baseURL + '/api/welcome/en/',{responseType: 'text'})
       this.showMessageFr$ = this.httpClient.get(this.baseURL + '/api/welcome/fr/',{responseType: 'text'})
-
+      this.presentationTimes$ = this.httpClient.get(this.baseURL + "/api/presentation", {responseType: "text"})
 
       this.roomsearch= new FormGroup({
         checkin: new FormControl(' '),

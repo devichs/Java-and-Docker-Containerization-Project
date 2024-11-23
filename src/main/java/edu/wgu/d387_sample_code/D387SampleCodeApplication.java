@@ -13,21 +13,21 @@ public class D387SampleCodeApplication {
 		ShowMessage showMessageUs = new ShowMessage(Locale.US);
 		Thread usThread = new Thread(showMessageUs);
 
-		//try {
+		try {
 			usThread.start();
-		//}
-		//catch (Exception e) {
-		//	e.printStackTrace();
-		//}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 
 		ShowMessage showMessageFr = new ShowMessage(Locale.CANADA_FRENCH);
 		Thread frThread = new Thread(showMessageFr);
 
-		//	try {
+			try {
 				frThread.start();
-		//	}
-		//	catch (Exception e) {
-		//		e.printStackTrace();
-		//	}
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
 	}
 }
